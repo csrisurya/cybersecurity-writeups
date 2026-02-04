@@ -27,6 +27,8 @@ The script uses URLSearchParams to extract the value of the returnPath key from 
 3. <b>Final Payload</b>
     * URL: https://[lab-id].web-security-academy.net/feedback?returnPath=javascript:alert(document.cookie)
 4. <b>Executation:</b> After navigating to the crafted URL and clicking the "Back" link, the alert(document.cookie) executed successfully, proving the vulnerability.
+![Frontend code after injection](image.png)
+![Injection result](image-2.png)
 
 ## Security Impact
 * Get unauthorized access by stealing session cookies -> act on user's behalf
