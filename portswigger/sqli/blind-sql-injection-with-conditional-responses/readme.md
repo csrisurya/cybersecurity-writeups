@@ -23,8 +23,7 @@ Before brute-forcing the password, we must determine its length using Burp Intru
     * <b>Process:</b> Use a "Numbers" payload type (1 to 30).
     * <b>Result:</b> The last payload that triggers the "Welcome back!" message indicates the length. In this lab, the password length was confirmed to be 20 characters.
 2. <b>Automated Brute-Force Script</b>
-Because Burp Suite Community Edition is rate-limited, a Python script is more efficient for extracting the 20-character string. The script iterates through each character position ($i$) and tests it against the ASCII values of printable characters ($j$).
-
+Because Burp Suite Community Edition is rate-limited, a Python script is more efficient for extracting the 20-character string. The script iterates through each character position ($i$) and tests it against the ASCII values of printable characters ($j$). [See the script](blind_sqli_with_conditional_responses.py)
 ## Conclusion
 By analyzing the presence or absence of the "Welcome back!" string, we successfully reconstructed the administrator's password: <i>inp2c2@geget88q1krnv</i>.
 
