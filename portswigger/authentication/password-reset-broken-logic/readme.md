@@ -31,9 +31,10 @@ In the Burp Repeater tab, modify the captured request as follows:
 * <b>Credential Setting:</b> Enter a new password of your choice in the password fields.
 3. Execute the Bypass  
 Click <b>Send</b>. The server responds with a 302 Found, indicating the password change was accepted despite the invalid token.
+![Changing the parameters](image.png)  
 4. Verify Account Takeover  
 Navigate to the login page and use the victim's username (carlos) and the newly set password to log in successfully.
-
+![Changing the parameters](image-2.png)
 ## Security Impact
 * <b>Complete Account Takeover:</b> An attacker can reset the password of any user, including administrative accounts, without needing access to the victim's email.
 * <b>Data Breach:</b> Unauthorized access to accounts can lead to the exposure of sensitive user data, such as email addresses and internal account details.
