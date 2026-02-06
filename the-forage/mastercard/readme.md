@@ -49,7 +49,8 @@ After the simulation, I analyzed departmental performance to identify where trai
 
 ## Targeted Security Training
 I developed a ["Phishing 101"](Security-Awareness-Phishing.pptx) training module specifically for the HR and Marketing teams, focusing on the tactics most likely to deceive them.  
-Training Summary:
-* **The False Alarm:** Educating users on how extreme urgency is used to induce panic.
-* **The Brand Mimic:** Training employees to spot slightly altered URLs (e.g., micr0ft.com).
-* **Defensive Playbook:** Providing actionable steps for reporting suspicious activity.
+
+### Training Presentation Preview
+Slide 1: Title Slide | Slide 2: Phishing 101 | Slide 3: Spot the Bait | Slide 4: Defensive Playbook 
+| :---: | :---: | :---: | :---: |
+| ![Slide 1](Slide1.png) | ![Slide 2](Slide2.png) | ![Slide 3](Slide3.png) | ![Slide 4](Slide4.png)
