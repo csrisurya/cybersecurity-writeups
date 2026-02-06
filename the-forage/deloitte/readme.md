@@ -25,17 +25,21 @@ Standard users followed a logical browsing flow:
 3. <b>Manual Navigation:</b> Sporadic API requests to specific factories and machines at irregular intervals (e.g., 09:29:57, then 09:30:57)
 
 User ID mdB7yD2dp1BFZPontHBQ1Z (connecting via IP 192.168.0.101) exhibited a pattern indicative of a bot or script.
-The requests occurred at the exact second (:48) every hour that simultaneously requests for these 4 machine IDs: meiyo, seiko, shenzhen, and berlin. 
-( IMAGE)
+The requests occurred at the exact second (:48) every hour that simultaneously made requests for these 4 machine IDs: meiyo, seiko, shenzhen, and berlin. 
+![bot](image.png)
 
 ## Persistent Unauthorized Access
 Further evidence of automation was found when the user's session expired.
 * <b>Observation:</b> Starting at 2021-06-26T00:00:48.000Z, the script continued attempting to query factory statuses.
 * <b>Outcome:</b> The server correctly issued 401 (UNAUTHORIZED) responses.
 * <b>Analysis:</b> A human user receiving an unauthorized error would stop or re-authenticate. The script continued to fire every hour until 16:00:48, and then seems to go again at 17:00:48 the next day.
-(IMAGE)
+![unauthorized access](image-2.png)
+![bot again](image-3.png)
 
 ## Remediation Recommendations
 1. <b>Rate Limiting:</b> Limit the frequency of API requests per User ID/IP to prevent automated data scraping.
 2. <b>Session Management:</b> Review session timeout durations and implement alerts for repeated 401 errors from the same internal IP.
 3. <b>Intranet Monitoring:</b> Deploy an Intrusion Detection System (IDS) to flag unusual dashbaord usage patterns.
+
+## Reference Material
+Refer to the [full web log](web_activity.log) and [instruction manual for reading logs](how-to-read-the-logs.pdf).
