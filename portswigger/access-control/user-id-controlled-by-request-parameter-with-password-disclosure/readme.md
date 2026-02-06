@@ -19,7 +19,7 @@ included as a plaintext value within the value attribute of an input field in th
 As seen in the technical notes, the password peter for the user wiener is visible in the page's 
 DOM via the browser's Inspect tool:  
 
-<input required type="password" name="password" value="peter">
+```<input required type="password" name="password" value="peter">```
 
 ## Exploitation Steps
 To demonstrate the impact of this vulnerability, we can escalate privileges by capturing the 
