@@ -21,6 +21,8 @@ DOM via the browser's Inspect tool:
 
 ```<input required type="password" name="password" value="peter">```
 
+![wiener password is visible](image.png)
+
 ## Exploitation Steps
 To demonstrate the impact of this vulnerability, we can escalate privileges by capturing the 
 administrator's credentials.  
@@ -29,7 +31,9 @@ administrator's credentials.
 3. Manipulate Request: Send the request to Burp Repeater. Change the <i>id</i> parameter from <i>wiener</i> to <i>administrator</i> and send the request.
 4. Extract Sensitive Data: Review the HTTP response. Search the HTML source for the password input field.
      * Discovered Administrator Password: <i>eqp76vkb2qdhttxez74t</i>.
+![admin password is visible](image-2.png)
 5. Full Compromise: Use the extracted credentials to log in as the <i>administrator</i>, access the Admin Panel, and perform restricted actions such as deleting user accounts (e.g., deleting the user <i>carlos</i>)
+![accessing admin panel](image-3.png)
 
 ## Security Impact
 * <b>Confidentiality:</b> High. Plaintext passwords and sensitive user data are exposed to any authenticated user.
