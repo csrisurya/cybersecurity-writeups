@@ -25,14 +25,14 @@ Standard users followed a logical browsing flow:
 3. <b>Manual Navigation:</b> Sporadic API requests to specific factories and machines at irregular intervals (e.g., 09:29:57, then 09:30:57)
 
 User ID mdB7yD2dp1BFZPontHBQ1Z (connecting via IP 192.168.0.101) exhibited a pattern indicative of a bot or script.
-The requests occurred at the exact second (:48) every hour.
-(INSERT IMAGE)
+The requests occurred at the exact second (:48) every hour that simultaneously requests for these 4 machine IDs: meiyo, seiko, shenzhen, and berlin. 
+( IMAGE)
 
 ## Persistent Unauthorized Access
 Further evidence of automation was found when the user's session expired.
 * <b>Observation:</b> Starting at 2021-06-26T00:00:48.000Z, the script continued attempting to query factory statuses.
 * <b>Outcome:</b> The server correctly issued 401 (UNAUTHORIZED) responses.
-* <b>Analysis:</b> A human user receiving an unauthorized error would stop or re-authenticate. The script continued to fire every hour until 16:00:48, receiving 16 consecutive failures before the user manually logged back in at 16:04:01.
+* <b>Analysis:</b> A human user receiving an unauthorized error would stop or re-authenticate. The script continued to fire every hour until 16:00:48, and then seems to go again at 17:00:48 the next day.
 (IMAGE)
 
 ## Remediation Recommendations
