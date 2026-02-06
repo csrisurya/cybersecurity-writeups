@@ -40,14 +40,15 @@ Mastercard Global IT Infrastructure Team.
 
 ## Data Analysis and Risk Assessment
 After the simulation, I analyzed departmental performance to identify where training was most critical.  
-IMAGE  
+
+![phishing sim results](image.png)
 
 **Findings:**
 * High-Risk Departments: HR and Marketing were the most susceptible, with HR showing a staggering 75% success rate for the attack.
 * The "Curiosity Gap": Departments dealing with external communications (HR/Marketing) are naturally more inclined to open attachments and links, making them primary targets.
 
 ## Targeted Security Training
-I developed a "Phishing 101" training module specifically for the HR and Marketing teams, focusing on the tactics most likely to deceive them.  
+I developed a ["Phishing 101"](Security Awareness - Phishing.pptx) training module specifically for the HR and Marketing teams, focusing on the tactics most likely to deceive them.  
 Training Summary:
 * **The False Alarm:** Educating users on how extreme urgency is used to induce panic.
 * **The Brand Mimic:** Training employees to spot slightly altered URLs (e.g., micr0ft.com).
