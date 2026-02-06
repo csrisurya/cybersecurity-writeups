@@ -53,4 +53,4 @@ I developed a ["Phishing 101"](Security-Awareness-Phishing.pptx) training module
 ### Training Presentation Preview
 Slide 1: Title Slide | Slide 2: Phishing 101 | Slide 3: Spot the Bait | Slide 4: Defensive Playbook 
 | :---: | :---: | :---: | :---: |
-| ![Slide 1](Slide1.png) | ![Slide 2](Slide2.png) | ![Slide 3](Slide3.png) | ![Slide 4](Slide4.png)
+| ![Slide 1](Slide1.jpg) | ![Slide 2](Slide2.jpg) | ![Slide 3](Slide3.jpg) | ![Slide 4](Slide4.jpg)
