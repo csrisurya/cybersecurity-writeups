@@ -5,6 +5,7 @@
 **Objective:** Use Splunk to identify fraudulent transaction patterns within a simulated dataset of customer payments.  
 
 ### Dataset Metadata
+**Note:** The [orginal file excel file](prepared_data.xlsx) was converted into a [csv file](prepared_data.csv) because Splunk had trouble importing excel files.
 
 | Feature Column | Data Type | Description | Key Values / Legend |
 | :--- | :--- | :--- | :--- |
@@ -25,7 +26,7 @@
     * *Example Query:* sourcetype="fraud_detection.csv" fraud="1" | stats count values(fraud) by category.
 * **Pattern Recognition:** Identified which demographics and merchants were most susceptible to fraudulent activity
 
-<DASHBAORD>
+![fraud detection dashboard]()
 
 ### References
 Refer to <instrcution> for 
