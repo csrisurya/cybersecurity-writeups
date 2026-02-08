@@ -26,10 +26,7 @@
     * *Example Query:* sourcetype="fraud_detection.csv" fraud="1" | stats count values(fraud) by category.
 * **Pattern Recognition:** Identified which demographics and merchants were most susceptible to fraudulent activity
 
-[fraud detection dashboard](fraud_detection_dashboard.pdf)
-
-### References
-Refer to <instrcution> for 
+![fraud detection dashboard](fraud_detection_dashboard.png)
 
 ## Incident Response - Phishing & Ransomware
 **Objective:** Analyze a multi-stage cyberattack targeting the Risk Department.
