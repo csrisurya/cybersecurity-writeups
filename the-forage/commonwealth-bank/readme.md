@@ -1,4 +1,4 @@
-# Commonwealth Bank Cybersecurity Generalist: Fraud Analytics & Enterprise Defense
+# Commonwealth Bank: Fraud Analytics & Enterprise Defense
 
 ## Fraud Detection & Data Visualization (Splunk)
 **Objective:** Use Splunk to identify fraudulent transaction patterns within a simulated dataset of customer payments.  
@@ -49,20 +49,30 @@ IMAGE
 * **Resolve & Recover:** Wipe infected machines for a clean OS reinstall, restore data from secure offline backups, and validate that no "sleeper" malware remains.
 * **Harden & Educate:** Conduct a "Lessons Learned" meeting, update email filters, and launch mandatory phishing training (e.g., Least Privilege).
 
-### References
-1. [Top 10 Common types of Cybersecurity Attacks (infocyte.com)](https://www.datto.com/blog/cybersecurity-101-intro-to-the-top-10-common-types-of-cybersecurity-attacks)
-2. [11 Types of Phishing + Real-Life Examples (pandasecurity.com)](https://www.pandasecurity.com/en/mediacenter/tips/types-of-phishing/)
-3. [8 Critical steps to take after a ransomware attack: Ransomware response guide for businesses - Emsisoft | Security Blog](https://blog.emsisoft.com/en/36921/8-critical-steps-to-take-after-a-ransomware-attack-ransomware-response-guide-for-businesses/)
-4. [Battling Ransomware: How to Respond to a Ransomware Incident (forbes.com)](https://www.forbes.com/sites/forbestechcouncil/2018/12/27/battling-ransomware-how-to-respond-to-a-ransomware-incident/?sh=b464b4864dc6)
-5. [Frequently Asked Questions - Ransomware | Information Security Office (berkeley.edu)](https://security.berkeley.edu/faq/ransomware/)
-6. [What to do before and after a cybersecurity breach? | american.edu](https://www.american.edu/kogod/research/cybergov/upload/what-to-do.pdf)
+## Security Awareness & Education 
+**Objective:** Design an infographic based on ACSC (Australian Cyber Security Centre) advice to educate peers on password security.
 
+**Core Principles Addressed:**
+* **Strong Passwords:** Implementing ACSC guidelines for complex, unique passwords.
+* **Management:** Utilizing tools and habits to manage credentials securely.
+* **Prevention:** Using visual storytelling to reduce the likelihood of successful social engineering attacks.
 
+## Penetration Testing Report (HackThisSite)
+**Objective:** Conduct a "Black-box" security audit of a web application and document vulnerabilities.
+* **Target:** https://www.hackthissite.org/missions/basic/
+* **Levels:** 1 through 11
 
-
-
-
-
+| Level | Vulnerability Type | Description & Findings | Mitigation Strategy |
+| :--- | :--- | :--- | :--- |
+| **1** | **Insecure Source Code** | Credentials (password) were stored directly within HTML comments in the client-side code. | Never store credentials or sensitive logic in client-side code (HTML, CSS, JS) where they are visible to users. |
+| **2** | **Broken Authentication** | The application failed to validate the presence of a password file, allowing access when no password was provided. | Implement robust server-side authentication checks and ensure configuration files are properly secured. |
+| **3** | **Information Disclosure** | Sensitive URL paths and file locations (e.g., password.php) were exposed in the HTML source code. | Disable directory listing and ensure sensitive file paths are not exposed in client-side code. |
+| **4 & 5** | **Insecure Direct Object Reference (IDOR)** | Attackers could intercept and modify the recipient's email address by manipulating hidden fields in the DOM. | Perform all sensitive business logic on the server side; do not rely on hidden client-side fields for security. |
+| **6** | **Weak Encryption** | The application used a simple, reversible character-shift cipher based on string position. | Use industry-standard, non-reversible cryptographic hashing algorithms. |
+| **7** | **Command Injection** | The application allowed execution of shell commands (e.g., `ls`) through unsanitized user input fields. | Implement strict input sanitization and use parameterized execution to prevent OS command injection. |
+| **8 & 9** | **SSI Injection / Path Traversal** | Server-Side Includes (SSI) were exploited to execute commands and navigate the file system directory. | Sanitize all user inputs and disable SSI execution where it is not strictly required for business functionality. |
+| **10** | **Cookie Manipulation** | Authorization was granted by manually modifying cookie parameters (e.g., `level10_authorized`) via an intercepting proxy. | Use secure, server-managed session tokens and never rely on client-side cookies for authorization status. |
+| **11** | **Directory Listing / Config Disclosure** | Insecure server configurations allowed for directory listing and unauthorized access to the `.htaccess` file. | Disable directory browsing on the web server and restrict access to configuration files like `.htaccess`. |
 
 
 
