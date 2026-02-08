@@ -1,4 +1,5 @@
 # Commonwealth Bank: Fraud Analytics & Enterprise Defense
+**Summary:** This simulation provided a comprehensive look into the daily responsibilities of a Cybersecurity Generalist at Commonwealth Bank. By leveraging Splunk Enterprise to visualize and detect financial fraud patterns, I developed a data-driven approach to protecting customer assets. My technical proficiency was further tested through a multi-stage Incident Response scenario involving phishing and ransomware, where I managed the full lifecycle from containment to recovery. Additionally, I conducted a deep-dive Penetration Test of web applications and designed ACSC-aligned security awareness content, demonstrating a well-rounded ability to both identify technical vulnerabilities and strengthen an organization's human firewall.
 
 ## Fraud Detection & Data Visualization (Splunk)
 **Objective:** Use Splunk to identify fraudulent transaction patterns within a simulated dataset of customer payments.  
