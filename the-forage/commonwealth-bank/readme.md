@@ -1,11 +1,11 @@
 # Commonwealth Bank: Fraud Analytics & Enterprise Defense
-**Summary:** This simulation provided a comprehensive look into the daily responsibilities of a Cybersecurity Generalist at Commonwealth Bank. By leveraging Splunk Enterprise to visualize and detect financial fraud patterns, I developed a data-driven approach to protecting customer assets. My technical proficiency was further tested through a multi-stage Incident Response scenario involving phishing and ransomware, where I managed the full lifecycle from containment to recovery. Additionally, I conducted a deep-dive Penetration Test of web applications and designed ACSC-aligned security awareness content, demonstrating a well-rounded ability to both identify technical vulnerabilities and strengthen an organization's human firewall.
+**Summary:** I utilized Splunk to detect financial fraud and managed the full Incident Response lifecycle for phishing and ransomware attacks. Additionally, I performed web penetration testing and developed ACSC-aligned security awareness content to mitigate both technical and human-centric risks.
 
 ## Fraud Detection & Data Visualization (Splunk)
 **Objective:** Use Splunk to identify fraudulent transaction patterns within a simulated dataset of customer payments.  
 
 ### Dataset Metadata
-**Note:** The [orginal file excel file](prepared_data.xlsx) was converted into a [csv file](prepared_data.csv) because Splunk had trouble importing excel files.
+**Note:** The [orginal file excel file](prepared_data.xlsx) was converted into a [csv file](prepared_data.csv) because Splunk had trouble importing excel files. I used this [reference](splunk_dashboard_guide.pdf) for building the dashboard.
 
 | Feature Column | Data Type | Description | Key Values / Legend |
 | :--- | :--- | :--- | :--- |
@@ -26,7 +26,7 @@
     * *Example Query:* sourcetype="fraud_detection.csv" fraud="1" | stats count values(fraud) by category.
 * **Pattern Recognition:** Identified which demographics and merchants were most susceptible to fraudulent activity
 
-![fraud detection dashboard]()
+[fraud detection dashboard](fraud_detection_dashboard.pdf)
 
 ### References
 Refer to <instrcution> for 
@@ -36,7 +36,9 @@ Refer to <instrcution> for
 
 ### Scenario
 * 10:30 AM - One colleague received an email from HR telling all employees to update their timesheets in the company’s support portal so the timesheets can be approved on time by their line managers against the next pay day. The colleague clicked the link in the email that opened what looked like the portal. However, following the employee's input of the user credentials, an unfamiliar error page appeared like the one below.
-IMAGE  
+
+![server error](google_server_error.png)
+
 * 2:00 PM - Eight more reports of emails similar to the one reported earlier are received by the IT Service Desk. Further investigation shows 62 colleagues across the Risk Department received the same email over the course of two days. The emails directed the users to a fake website to steal their usernames and passwords and download a harmful program.
 * 3:50 PM - IT Service Desk receives calls and emails from more colleagues that the file-shares are not opening and they receive an error when trying to open a Word document they have always been able to open.
 
@@ -58,6 +60,8 @@ IMAGE
 * **Strong Passwords:** Implementing ACSC guidelines for complex, unique passwords.
 * **Management:** Utilizing tools and habits to manage credentials securely.
 * **Prevention:** Using visual storytelling to reduce the likelihood of successful social engineering attacks.
+
+![infographic](password_infographic.png)
 
 ## Penetration Testing Report (HackThisSite)
 **Objective:** Conduct a "Black-box" security audit of a web application and document vulnerabilities.
