@@ -16,7 +16,7 @@ The [design doc](./Technical_Design_Doc) was intentionally flawed — our job wa
 
 ## Architecture Diagram
 
-![AccessHub Architecture Diagram](./Threat_Model_drawio.png)
+![AccessHub Architecture Diagram](./Architecture_Diagram.png)
 
 **Trust Boundaries Identified:**
 - Internet / AWS boundary
