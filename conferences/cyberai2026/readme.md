@@ -12,7 +12,7 @@ AccessHub is a fictional internal web application that allows employees to reque
 - **Database**: RDS PostgreSQL in a private subnet
 - **CI/CD**: GitHub Actions → ECR → ECS
 
-The (design doc)[./Technical_Design_Doc] was intentionally flawed — our job was to find the security issues before any code was written.
+The [design doc](./Technical_Design_Doc) was intentionally flawed — our job was to find the security issues before any code was written.
 
 ## Architecture Diagram
 
