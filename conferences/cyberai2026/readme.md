@@ -3,7 +3,7 @@
 A hands-on AI-assisted threat modeling exercise completed at the **CyberAI Conference hosted at the University of Washington Bothell**. Working as part of a 4-person team (Team Grayhats), we conducted a full security review of a fictional internal access management tool called **AccessHub**, using STRIDE methodology and AI.
 
 
-## 🏗️ What We Reviewed
+## What We Reviewed
 
 AccessHub is a fictional internal web application that allows employees to request access to company resources, and lets managers approve or deny those requests. It is a standard three-tier AWS architecture:
 
@@ -14,7 +14,7 @@ AccessHub is a fictional internal web application that allows employees to reque
 
 The design doc was intentionally flawed — our job was to find the security issues before any code was written.
 
-## 🗺️ Architecture Diagram
+## Architecture Diagram
 
 ![AccessHub Architecture Diagram](./Threat_Model_drawio.png)
 
@@ -62,6 +62,21 @@ The design explicitly states that some older endpoints build SQL queries by conc
 
 **Mitigation:** Replace all string-concatenated SQL with parameterized queries immediately. Add input validation and least-privilege database permissions.
 
+## How We Used AI
 
+AI was used throughout the exercise to help understand the system architecture, generate initial threat lists, and refine written descriptions. Key lessons learned:
 
+- **Diagram generation**: AI-generated diagrams were often inaccurate — arrows pointed to wrong components, included non-existent services, and were hard to read. We created arrows manually to ensure accuracy.
+- **Threat brainstorming**: AI produced broad candidate threat lists quickly, but we had to validate each one against the actual design doc. Several AI suggestions didn't apply to this specific system.
+- **Simpler prompts worked better**: Overly detailed prompts produced hallucinations; shorter, focused prompts gave more reliable outputs.
+- **Human judgment was essential**: AI outputs required review and validation before use. The team's discussion and reasoning — not the AI's list — was the actual deliverable.
+
+## Skills Demonstrated
+
+- Threat modeling with STRIDE framework
+- Architecture diagramming and trust boundary analysis
+- AI-assisted security review (prompt engineering, output validation)
+- Risk prioritization (Likelihood × Impact)
+- Identifying authentication, authorization, injection, secrets management, and infrastructure vulnerabilities
+- Technical writing and structured security documentation
 
